@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pinguinos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. Reset & Base Styles --- */
+        :root {
+            --bg-color: #0f172a;       /* Dark Navy for premium feel */
+            --text-color: #f8fafc;     /* Off-white for readability */
+            --accent-color: #38bdf8;   /* Light blue accent */
+            --button-bg: #fff;         /* High contrast button */
+            --button-text: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* --- 2. Typography --- */
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.05rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #94a3b8; /* Muted text */
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .status {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* --- 3. Form Styling --- */
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input[type="email"] {
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background: #1e293b;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="email"]:focus {
+            border-color: var(--accent-color);
+        }
+
+        button {
+            padding: 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* --- 4. Footer --- */
+        footer {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: #475569;
+        }
+
+        /* --- 5. Responsive Adjustments --- */
+        @media (min-width: 640px) {
+            h1 { font-size: 4rem; }
+            
+            /* On desktop, put input and button side-by-side */
+            .signup-form {
+                flex-direction: row;
+            }
+            
+            input[type="email"] { flex: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="status">
+            🐧 Pinguinos — Coming Soon
+        </div>
+
+        <h1>Friendships that feel effortless.</h1>
+        
+        <p class="tagline">
+            Find friends you genuinely click with and want to see again.
+            Join the waitlist to get early access.
+        </p>
+
+        <form class="signup-form" action="YOUR_MAILCHIMP_ACTION_URL" method="POST">
+            <input type="email" name="EMAIL" placeholder="Enter your email" required>
+            <button type="submit">Join the Waitlist 🚀</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2026 Pinguinos. All rights reserved.
+    </footer>
+
+</body>
+</html>
